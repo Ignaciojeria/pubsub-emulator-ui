@@ -10,7 +10,7 @@ export class PubsubService {
   project_id = "fake-project"
   public currentHost = process.env.NG_APP_EMULATOR_URL
 
-  private _projectList = new BehaviorSubject<string[]>(["test-project"])
+  private _projectList = new BehaviorSubject<string[]>(["fake-project"])
   private _currentProject = new ReplaySubject<string>()
   private _currentTopic = new ReplaySubject<Topic>()
   private _currentSubscription = new ReplaySubject<Subscription>()
