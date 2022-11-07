@@ -7,8 +7,8 @@ import { NewSubscriptionRequest } from '../components/subscription-list/new-subs
   providedIn: 'root'
 })
 export class PubsubService {
-  project_id = "test-project"
-  public currentHost = "http://localhost:8681"
+  project_id = "fake-project"
+  public currentHost = process.env.NG_APP_EMULATOR_URL
 
   private _projectList = new BehaviorSubject<string[]>(["test-project"])
   private _currentProject = new ReplaySubject<string>()
